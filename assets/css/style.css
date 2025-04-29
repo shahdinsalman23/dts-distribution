@@ -1304,3 +1304,169 @@ nav.mobile-nav .header-nav ul li {
 
 
 }
+
+
+
+@media screen and (max-width: 600px) {
+    .first-banner-txt {
+      transform: translate(-50%, 0%);
+      padding: 50px 30px 0px 30px;
+  }
+
+  .first-banner-txt h2 {
+    font-size: 34px;
+  }
+
+    .first-banner-txt p {
+      color: #fff;
+      font-size: 16px;
+  }
+
+  .first-banner-video {
+    height: 320px;
+  }
+
+  .first-banner-video video {
+    object-fit: cover;
+  }
+
+  .special-kind-txt {
+    padding: 20px 0px 40px 0px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .precision-matter-txt {
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .precision-matter-txt h3 {
+    font-size: 38px;
+  }
+
+  section.precision-matter-sec {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .industry-freight-txt h3 {
+    font-size: 38px;
+  }
+
+  .industry-freight-sec {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .latest-news-sec {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .latest-news-card {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .latest-card-flex .latest-news-txt h4 {
+    font-size: 18px;
+  }
+
+  .latest-card-flex {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .latest-news-sec {
+    padding: 50px 0px 0px 0px;
+  }
+
+  .precision-matter-txt {
+    padding: 0px 0px 40px 0px;
+  }
+
+  .dts-numbers-text {
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+  }
+
+  .dts-numbers-sec {
+    padding: 100px 0px 50px 0px;
+  }
+
+  footer.footer-main {
+    padding: 50px 0px 20px 0px;
+  }
+
+  .footer-links {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+  }
+
+  .footer-links ul li a {
+    font-size: 16px;
+  }
+  
+  .footer-links h5 {
+    font-size: 24px;
+  }
+
+  .footer-logo {
+    padding: 0px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .inner-banner-txt {
+    background: red;
+    text-align: center;
+    padding: 30px 0px;
+    border-radius: 10px;
+  }
+
+  .inner-banner-txt h3 {
+    color: #fff;
+    font-size: 50px;
+    font-family: 'foundrysterling';
+  }
+
+  .contact-inform-seperate {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .getin-touch-txt {
+    padding: 20px 10px 30px 0px;
+    text-align: center;
+  }
+
+  .get-input-field {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .dts-provide-supply-sec {
+    padding: 60px 0px 50px 0px;
+  }
+
+  .dts-provide-head h3 {
+    font-size: 38px;
+  }
+
+  .dts-provide-card:hover {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .vision-strategy-sec {
+    padding: 0px 0px 80px 0px;
+  }
+
+  .vision-strategy-txt {
+    padding: 20px 0px 30px 0px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .more-about-dts-card {
+    margin: 0px 0px 30px 0px;
+  }
+
+ }

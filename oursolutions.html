@@ -11,32 +11,7 @@
 </head>
 
 <body>
-  <!-- <div class="mobile-nav"> 
-      <a href="/" class="logo-main"> <img src="assets/images/logo.png" alt="*" /></a>
-      <nav>
-        <ul class="unstyled mainnav pbpx-15">
-          <li><a href="">Home</a></li>
-          <li><a href="javascript:;">About <i class="xicon icon-angle-down"></i></a>
-            <ul class="firstlevel unstyled">
-              <li><a href="about.html">Tables</a></li>
-              <li><a href="hover-boxes.html">Hover Boxes</a></li>
-              <li><a href="sidebar.html">Sidebar</a></li>
-            </ul>
-          </li>
-          <li><a href="javascript:;">Sliders<i class="xicon icon-angle-down"></i></a>
-            <ul class="firstlevel unstyled">
-              <li><a href="javascript:;">drop level 1</a> </li>
-              <li><a href="javascript:;">drop level 1</a></li>
-              <li><a href="javascript:;">drop level 1</a></li>
-            </ul>
-          </li>
-          <li><a href="accordion.html">Accordion</a></li>
-          <li><a href="tabs.html">Tabs</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div> -->
+ 
   <main class="app-container">
     <!-- Mobile Navigation Button Start-->
     <!-- <div class="mobile-nav-btn"> <span class="lines"></span> </div> -->
@@ -48,32 +23,71 @@
     <header class="header-main">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-6 ">
             <div class="header-logo">
-              <img src="assets/images/logo.png" alt="">
+              <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
             </div>
           </div>
-          <div class="col-lg-7">
+          <div class="col-lg-7  d-none d-lg-block">
             <div class="header-nav">
               <ul>
-                <li><a href="#">About DTS</a></li>
-                <li><a href="#">Our solutions</a></li>
-                <li><a href="#">Sustainability</a></li>
+                <li class="dropdown-nav"><a href="aboutus.html">About DTS</a>
+                  <ul class="dropdown-menus">
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">purpose & strategy</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Data Privacy</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-nav"><a href="oursolutions.html">Our solutions</a>
+                  <ul class="dropdown-menus">
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">purpose & strategy</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Data Privacy</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-nav"><a href="sustainability.html">Sustainability</a>
+                  <ul class="dropdown-menus">
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">purpose & strategy</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Data Privacy</a></li>
+                  </ul>
+                </li>
                 <!-- <li><a href="#">Careers</a></li> -->
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li class="dropdown-nav"><a href="support.html">Support</a>
+                  <ul class="dropdown-menus">
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="help.html">Help & Support</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact us</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-6">
             <div class="header-end">
-              <button type="button" data-toggle="modal" data-target="#exampleModal">Get a quote</button>
+              <button type="button" data-toggle="modal" data-target="#exampleModal" class=" d-none d-lg-block">Get a quote</button>
+              <button class="hamburger d-lg-none">☰</button>
             </div>
           </div>
         </div>
       </div>
     </header>
     <!-- Header Main End -->
+
+
+     <!-- Mobile Sidebar  Start -->
+     <div class="mobile-sidebar">
+      <div class="sidebar-header d-lg-none">
+        <img src="assets/images/logo.png" alt="" class="sidebar-logo">
+        <button class="close-sidebar d-lg-none">&times;</button>
+      </div>
+      <nav class="mobile-nav d-lg-none"></nav>
+    </div>
+    <div class="overlay"></div>
+    <!-- Mobile Sidebar End -->
 
     <!-- Get A Quote Modal Start -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
