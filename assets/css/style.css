@@ -1,0 +1,1306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900|Open+Sans:300,400,600,700');
+@import url('../css/bootstrap.css');
+@import url('../css/animate.css');
+@import url('../css/jquery.fancybox.min.css');
+@import url('../css/slick.css');
+@import url('../css/xicon.css');
+@import url('../css/variables.css');
+@import url('../css/mobile-nav.css');
+
+@font-face {
+  font-family: foundrysterling;
+  src: url(../fonts/FoundrySterlingBold.ttf);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/************** Theme Button CSS Start **************/
+
+.themebtn {
+  background: red;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-family: foundrysterling;
+  border: 1px solid red;
+  transition: all .6s ease;
+  font-size: 18px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.themebtn:hover {
+  background: transparent;
+  color: red;
+  text-decoration-line: none;
+}
+
+
+/************** Theme Button CSS End **************/
+
+
+
+/************** Header Main CSS Start **************/
+
+header.header-main {
+  padding: 15px 0px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.header-nav {
+  height: 100%;
+}
+
+.header-nav ul {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-nav ul li {
+  list-style: none;
+}
+
+.header-nav {
+  height: 100%;
+}
+
+.header-end button {
+  background: red;
+  color: #fff;
+  padding: 8px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: foundrysterling;
+  border: 1px solid red;
+  transition: all .6s ease;
+}
+
+.header-end button:focus {
+  outline: none;
+}
+
+.header-end button:hover {
+  text-decoration-line: none;
+  background: transparent;
+  color: red;
+}
+
+.header-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header-nav ul li a {
+  font-family: foundrysterling;
+  color: #000;
+  font-size: 16px;
+  transition: all .6s ease;
+  position: relative;
+}
+
+.header-nav ul li a:hover {
+  color: #000;
+  text-decoration-line: none;
+}
+
+
+.header-nav ul li a::before {
+  position: absolute;
+  content: "";
+  background: red;
+  height: 2px;
+  width: 0%;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 30px;
+  transition: all .6s ease;
+}
+
+.header-nav ul li a:hover:before {
+  width: 100%;
+}
+
+.modal-header .close:focus {
+  outline: none;
+}
+
+.dropdown-nav {
+  position: relative;
+}
+
+
+/* Dropdown Menu Styles */
+.dropdown-menus {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 4px;
+  margin-top: 0.5rem !important;
+  flex-direction: column;
+  width: max-content;
+  height: auto !important;
+  align-items: flex-start !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.dropdown-nav:hover .dropdown-menus {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menus li {
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown-menus li a {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  color: #444;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menus li:hover a {
+  background: red;
+  color: #fff !important;
+  padding-left: 1.75rem;
+}
+
+.dropdown-nav > a::after {
+  content: "▼";
+  font-size: 0.6em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+.dropdown-menus li a::before {
+  display: none;
+}
+
+/************** Header Main CSS End **************/
+
+
+/************** Get A Quote Modal CSS Start **************/
+
+
+.get-input-field input {
+  width: 100%;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid red;
+  font-family: 'Poppins';
+  color: #000;
+}
+
+.get-input-field {
+  margin: 0px 0px 10px 0px;
+}
+
+.get-input-field label {
+  font-family: 'foundrysterling';
+  color: #000;
+}
+
+.get-input-field textarea {
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 5px;
+  height: 100px;
+  resize: none;
+  padding: 5px 10px;
+  font-family: 'Poppins';
+  color: #000;
+}
+
+.get-input-field input:focus {
+  outline: none;
+}
+
+.get-input-field textarea:focus {
+  outline: none;
+}
+
+.getquote-formbtn {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.getquote-formbtn button {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 40px;
+  border: 1px solid red;
+  font-size: 16px;
+  font-family: 'foundrysterling';
+  background: red;
+  color: #fff;
+  cursor: pointer;
+  transition: all .6s ease;
+}
+
+.getquote-formbtn button:hover {
+  background: transparent;
+  color: red;
+}
+
+.getquote-formbtn button:focus {
+  outline: none;
+}
+
+.quote-modal-dialog .modal-content {
+  border: 1px solid transparent;
+}
+
+.quote-modal-content .modal-header h5 {
+  font-family: 'foundrysterling';
+  color: #000;
+}
+
+
+/************** Get A Quote Modal CSS End **************/
+
+
+/*********** First Banner Section CSS Start ***********/
+
+.first-banner-video video {
+  width: 100%;
+  height: 100%;
+}
+
+
+section.first-banner-sec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.first-banner-sec::before {
+  position: absolute;
+  content: "";
+  background: #000000c7;
+  width: 100%;
+  height: 99%;
+  top: 0px;
+}
+
+.first-banner-txt {
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 50%);
+  padding: 50px 0px 0px 0px;
+}
+
+.first-banner-txt h2 {
+  color: #fff;
+  font-family: 'foundrysterling';
+  font-size: 70px;
+}
+
+.first-banner-txt p {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Poppins';
+  margin: 0px 0px 20px 0px;
+}
+
+/*********** First Banner Section CSS End ***********/
+
+
+
+/*********** Special Kind Section CSS Start ***********/
+
+.special-kind-sec {
+  padding: 50px 0px;
+}
+
+.special-kind-img img {
+  width: 100%;
+}
+
+.special-kind-txt h3 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 50px;
+}
+
+.special-kind-txt h5 {
+  color: #000;
+  font-family: 'Poppins';
+  font-weight: 400;
+  padding: 0px 40px 0px 0px;
+}
+
+.special-kind-txt {
+  padding: 30px 0px 0px 0px;
+  display: flex
+;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+section.precision-matter-sec {
+  padding: 50px 0px;
+}
+
+.precision-matter-txt h3 {
+  color: #000;
+  font-family: 'foundrysterling';
+  font-size: 40px;
+}
+
+.precision-matter-txt h5 {
+  color: #000;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.precision-matter-txt {
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*********** Special Kind Section CSS End ***********/
+
+
+/*********** Industry Freight Section CSS Start ***********/
+
+.industry-freight-sec {
+  padding: 80px 0px 50px 0px;
+}
+
+.industry-freight-txt h3 {
+  margin: 0px;
+  color: #000;
+  font-family: 'foundrysterling';
+  font-size: 40px;
+  text-align: center;
+}
+
+.industry-freight-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid red;
+  margin: 0px 0px 50px 0px;
+  border-radius: 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transform: translate(0px, 0px);
+  transition: all .6s ease;
+}
+
+.industry-freight-card h6 {
+  color: #000;
+  font-family: 'foundrysterling';
+  font-size: 20px;
+  padding: 10px 0px;
+}
+
+.industry-freight-card p {
+  font-family: 'Poppins';
+  color: #000;
+  line-height: normal;
+  margin: 0px;
+}
+
+.industry-freight-txt {
+  margin: 0px 0px 50px 0px;
+}
+
+.industry-freight-card:hover {
+  transform: translate(0px, -10px);
+  background: red;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.industry-freight-card:hover h6 {
+  color: #fff;
+}
+
+.industry-freight-card:hover p {
+  color: #fff;
+}
+
+.industry-freight-card:hover img {
+  filter: invert(1);
+}
+
+
+/*********** Industry Freight Section CSS End ***********/
+
+
+/*********** Latest News Section CSS Start ***********/
+
+
+.latest-news-img img {
+  width: 100%;
+  height: 250px;
+}
+
+.latest-news-img {
+  margin: 0px 0px 20px 0px;
+}
+
+
+.latest-news-txt h6 {
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  color: #000;
+}
+
+.latest-news-txt h4 {
+  font-family: 'foundrysterling';
+  font-size: 24px;
+  color: #000;
+  transition: all .6s ease;
+}
+
+.latest-news-card:hover .latest-news-txt h4 {
+  color: red;
+}
+
+.latest-news-txt p {
+  color: #000;
+  font-family: 'Poppins';
+  line-height: normal;
+  margin: 0px;
+}
+
+.latest-news-card {
+  background: #ffff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.latest-news-sec {
+  padding: 80px 0px 50px 0px;
+}
+
+.latest-news-txt {
+  padding: 0px 25px 30px 25px;
+}
+
+.latest-news-head {
+  margin: 0px 0px 40px 0px;
+  text-align: center;
+}
+
+.latest-news-head h3 {
+  font-family: 'foundrysterling';
+  font-size: 50px;
+  color: #000;
+}
+
+.latest-card-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0px 0px 20px 0px;
+}
+
+.latest-card-flex .latest-news-img img {
+  width: 170px;
+  height: 184px;
+  object-fit: cover;
+}
+
+.latest-card-flex .latest-news-txt {
+  padding: 0px 10px 0px 10px;
+}
+
+.latest-card-flex .latest-news-img {
+  margin: 0px;
+}
+
+.latest-card-flex .latest-news-txt h4 {
+  font-size: 22px;
+}
+
+/*********** Latest News Section CSS End ***********/
+
+
+/*********** DTS Numbers Section CSS Start ***********/
+
+.dts-numbers-sec {
+  background: url(../images/red-world-map.webp) no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  padding: 100px 0px;
+  position: relative;
+}
+
+.dts-numbers-sec::before {
+  position: absolute;
+  content: "";
+  background: #95181785;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+.dts-numbers-text {
+  text-align: center;
+}
+
+.dts-numbers-text h4 {
+  font-family: 'foundrysterling';
+  color: #fff;
+  font-size: 70px;
+}
+
+.dts-numbers-text h5 {
+  font-family: 'Poppins';
+  color: #fff;
+  font-size: 22px;
+}
+
+
+/*********** DTS Numbers Section CSS End ***********/
+
+
+/*********** Testimonails Section CSS Start ***********/
+
+
+section.testimonails-sec-start {
+  padding: 80px 0px;
+}
+
+.testi-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.testimonail-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  margin: 0px 0px 30px 0px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+}
+
+.testi-img {
+  width: 100%;
+}
+
+
+.testi-text p {
+  font-family: 'Poppins';
+  font-size: 13px;
+  color: #000;
+  margin: 0px 0px 10px 0px;
+  font-style: italic;
+}
+
+.testi-text h4 {
+  font-size: 16px;
+  text-align: end;
+  margin: 0px;
+  color: #000;
+  font-family: 'foundrysterling';
+}
+
+
+.testi-head {
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+}
+
+.testi-head h3 {
+  font-family: 'foundrysterling';
+  font-size: 50px;
+  color: #000;
+}
+
+.testimonial-slider .slick-track {
+  padding: 50px 0px 0px 0px;
+}
+
+/*********** Testimonails Section CSS End ***********/
+
+
+/*********** Any Question Section CSS Start ***********/
+
+
+section.any-question-sec {
+  background: red;
+  padding: 60px 0px;
+}
+
+.any-question-txt {
+  text-align: center;
+  color: #fff;
+}
+
+.any-question-txt h4 {
+  font-family: 'foundrysterling';
+  font-size: 50px;
+}
+
+.any-question-txt p {
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+.any-question-txt button {
+  background: #fff;
+  color: red;
+  padding: 8px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: foundrysterling;
+  border: 1px solid #fff;
+  transition: all .6s ease;
+}
+
+.any-question-txt button:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.any-question-txt button:focus {
+  outline: none;
+}
+
+
+
+/*********** Any Question Section CSS End ***********/
+
+
+/*********** Inner Banner Section CSS Start ***********/
+
+
+.inner-banner-sec {
+  background: url(../images/innerbanner.webp) no-repeat center;
+  background-size: cover;
+  padding: 100px 0px;
+  width: 100%;
+  position: relative;
+}
+
+.inner-banner-sec::before {
+  position: absolute;
+  content: "";
+  background: #0000009e;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.inner-breadcrum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inner-banner-txt {
+    background: red;
+    text-align: center;
+    padding: 40px 0px;
+    border-radius: 10px;
+}
+
+.inner-banner-txt h3 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'foundrysterling';
+}
+
+.inner-breadcrum a {
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+.inner-breadcrum span {
+    color: #fff;
+}
+
+.inner-breadcrum a:hover {
+    text-decoration-line: none;
+}
+
+/*********** Inner Banner Section CSS End ***********/
+
+
+/*********** About US Page CSS Start ***********/
+
+/*********** DTS Provide Supply Section CSS Start ***********/
+
+
+.dts-provide-supply-sec {
+  padding: 80px 0px 50px 0px;
+}
+
+.dts-provide-head {
+  text-align: center;
+  margin: 0px 0px 70px 0px;
+}
+
+.dts-provide-head h3 {
+  color: #000;
+  font-family: 'foundrysterling';
+}
+
+.dts-provide-card {
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+  transition: all .6s ease;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+}
+
+.dts-provide-card:hover {
+  transform: translate(0px, -10px);
+  background: red;
+}
+
+.dts-provide-card:hover img {
+  filter: invert(1);
+}
+
+.dts-provide-card:hover  h5 {
+  color: #ffff;
+}
+
+.dts-provide-card h5 {
+  color: #000;
+  font-family: 'Poppins';
+}
+
+.dts-provide-card img {
+  margin: 0px 0px 20px 0px;
+}
+
+
+/*********** DTS Provide Supply Section CSS End ***********/
+
+
+
+/*********** Vision & Strategy Section CSS Start ***********/
+
+
+.vision-strategy-sec {
+  padding: 50px 0px 80px 0px;
+}
+
+.vision-strategy-txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px 30px 0px 0px;
+}
+
+.vision-strategy-txt h4 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 36px;
+  margin: 0px 0px 15px 0px;
+}
+
+.vision-strategy-txt p {
+  font-family: 'Poppins';
+  color: #000;
+  font-size: 16px;
+}
+
+.vision-img img {
+  width: 100%;
+}
+
+
+/*********** Vision & Strategy Section CSS End ***********/
+
+
+/*********** More About DTS Section CSS Start ***********/
+
+
+.dtsmore-cardimg img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.more-about-dts-card {
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 13%);
+  transition: all .6s ease;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+}
+
+.dtsmore-txt {
+  padding: 20px;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dtsmore-txt h5 {
+  font-size: 22px;
+  color: #000;
+  font-family: 'foundrysterling';
+}
+
+.dtsmore-txt a {
+  font-family: 'Poppins';
+  font-size: 16px;
+  transition: all .6s ease;
+  transform: translate(0px, 0px);
+}
+
+.dtsmore-txt a:hover {
+  color: #0a539e;
+  text-decoration-line: none;
+  transform: translate(0px, -5px);
+}
+
+.more-about-dts {
+  padding: 70px 0px 80px 0px;
+}
+
+.more-about-dtshead {
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+}
+
+.more-about-dtshead h3 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 40px;
+}
+
+.more-about-dts-card:hover {
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 26%);
+  transform: translate(0px, -10px);
+}
+
+.dtsmore-txt a i {
+  font-size: 12px;
+}
+
+
+/*********** More About DTS Section CSS End ***********/
+
+
+/*********** About US Page CSS End ***********/
+
+
+/*********** Contact Us Section CSS Start ***********/
+
+
+section.contact-form-sec {
+  padding: 70px 0px 0px 0px;
+}
+
+.contact-form {
+  padding: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.contact-form h6 {
+  text-align: center;
+  color: red;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+}
+
+.contact-form h4 {
+  font-family: 'foundrysterling';
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin: 0px 0px 30px 0px;
+}
+
+.getin-touch-txt h3 {
+  color: #000;
+  font-family: 'foundrysterling';
+  font-size: 50px;
+}
+
+.getin-touch-txt p {
+  font-family: 'Poppins';
+  line-height: normal;
+  font-size: 15px;
+}
+
+.contact-inform-seperate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-inform-icon {
+  background: red;
+  height: 100%;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 70px;
+  text-align: center;
+}
+
+.contact-inform-icon span {
+  font-size: 24px;
+  color: #fff;
+}
+
+.contact-information {
+  margin: 40px 0px 0px 0px;
+}
+
+.contact-inform-seperate {
+  margin: 0px 0px 30px 0px;
+}
+
+.contact-inform-detail h5 {
+  font-size: 22px;
+  color: #000;
+  font-family: 'foundrysterling';
+  margin: 0px 0px 5px 0px;
+}
+
+.contact-inform-detail p {
+  color: #000;
+  font-family: 'Poppins';
+  margin: 0px;
+  font-size: 16px;
+}
+
+.getin-touch-txt {
+  padding: 20px 10px 0px 0px;
+}
+
+
+/*********** Contact Us Section CSS End ***********/
+
+
+/*********** Footer Main Section CSS Start ***********/
+
+footer.footer-main {
+  padding: 50px 0px;
+}
+
+.footer-links h5 {
+  font-size: 22px;
+  color: #000;
+  font-family: 'foundrysterling';
+}
+
+.footer-links ul li {
+  list-style: none;
+  padding: 3px 0px;
+}
+
+.footer-links ul li a {
+  font-size: 14px;
+  color: #000;
+  font-family: "Poppins";
+  transition: all .6s ease;
+}
+
+
+.footer-logo img {
+  width: 100%;
+  max-width: 150px;
+  margin: 0px 0px 15px 0px;
+}
+
+.footer-links ul li a:hover {
+  text-decoration-line: none;
+  color: red;
+}
+
+.footer-logo p {
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.footer-logo ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.footer-logo ul li {
+  list-style: none;
+}
+
+.footer-logo ul li a {
+  background: red;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 1px solid red;
+  transition: all .6s ease;
+}
+
+.footer-logo ul li a:hover {
+  background: transparent;
+  color: red;
+}
+
+.footer-logo ul li .facebook {
+  padding: 7px 14px;
+}
+
+.footer-logo ul li .twitter {
+  padding: 7px 11px;
+}
+
+.footer-logo ul li  .linkedin {
+  padding: 7px 12px;
+}
+
+.footer-logo ul li  .instagram {
+  padding: 7px 12px;
+}
+
+.footer-logo {
+  padding: 0px 20px 0px 0px;
+}
+
+.footer-copyright {
+  background: red;
+  padding: 12px 0px;
+}
+
+.copyright-para p {
+  margin: 0px;
+  text-align: center;
+  font-family: 'Poppins';
+  color: #fff;
+}
+
+.car-top img {
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  z-index: 999;
+  right: 40px;
+  background: red;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: mover 1s infinite  alternate;
+}
+
+.whatsaap-icon  a img {
+  position: fixed;
+  bottom: 90px;
+  width: 50px;
+  right: 40px;
+  z-index: 999;
+}
+
+/*********** Footer Main Section CSS End ***********/
+
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 991px) {
+  .hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .mobile-sidebar.active {
+    left: 0;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sidebar-logo {
+    width: 120px;
+  }
+  
+  .close-sidebar {
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0;
+    display: block !important; 
+  }
+  
+  .mobile-nav li {
+    margin-bottom: 10px;
+  }
+  
+  .mobile-nav a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Mobile Dropdown Styles */
+  .mobile-nav .dropdown-menus {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+    left: 10px;
+  }
+  
+  .mobile-nav .dropdown-menus.active {
+    max-height: 500px;
+  }
+  
+  .mobile-nav .dropdown-nav > a {
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  .mobile-nav .dropdown-nav > a::after {
+    content: "▶";
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-nav .dropdown-nav.active > a::after {
+    transform: rotate(90deg);
+  }
+
+  nav.mobile-nav .header-nav ul li a::before {
+    display: none;
+}
+
+nav.mobile-nav .header-nav ul li {
+  padding: 0px 5px 0px 5px;
+}
+
+.header-logo {
+  justify-content: left;
+}
+
+.header-end {
+  justify-content: end;
+}
+
+.header-end .hamburger {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  font-weight: bold;
+  font-size: 30px;
+  color: red;
+}
+
+
+}
