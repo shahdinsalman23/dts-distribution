@@ -1447,6 +1447,11 @@ section.faqs-sec {
   cursor: pointer;
 }
 
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
 
 /*********** Footer Main Section CSS Start ***********/
 

@@ -499,8 +499,10 @@
 
 
   <script type="text/javascript">
-   let currentLang = localStorage.getItem('dtsLang') || 'en';
+    // Language Store Karne Ke Liye
+let selectedLang = localStorage.getItem('siteLang') || 'en';
 
+// Google Translate Initialize
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
@@ -508,46 +510,46 @@ function googleTranslateElementInit() {
     layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
   }, 'google_translate_element');
 
-  // Force language from storage
+  // Force Language Set Karo
   const googleSelect = document.querySelector('.goog-te-combo');
   if(googleSelect) {
-    googleSelect.value = currentLang;
+    googleSelect.value = selectedLang;
     googleSelect.dispatchEvent(new Event('change'));
   }
 }
 
+// Language Change Handler
 function changeLanguage(lang) {
-  localStorage.setItem('dtsLang', lang); // Store in storage
-  currentLang = lang;
+  selectedLang = lang;
+  localStorage.setItem('siteLang', lang);
   
+  // Google Translate Ko Update Karo
   const googleSelect = document.querySelector('.goog-te-combo');
   if(googleSelect) {
     googleSelect.value = lang;
     googleSelect.dispatchEvent(new Event('change'));
-    document.cookie = `googtrans=/en/${lang}; path=/`; // Cookie set
+    document.cookie = `googtrans=/en/${lang}; path=/; domain=.github.io`;
   }
+  
+  // URL Hash Update (Navigation Ke Liye)
+  window.location.hash = `googtrans(/en/${lang})`;
 }
 
-// Page navigation pe language maintain karo
+// Page Load Par Setup
 document.addEventListener('DOMContentLoaded', () => {
   const langSwitcher = document.getElementById('languageSwitcher');
-  
-  // Load saved language
-  langSwitcher.value = currentLang;
-  
-  // URL hash update karo
-  if(window.location.hash.indexOf('googtrans') === -1) {
-    window.location.hash = `googtrans(/en/${currentLang})`;
-  }
+  langSwitcher.value = selectedLang;
 
-  // Navigation guard
+  // Har Link Ko Modify Karo
   document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const url = new URL(this.href);
-      url.hash = `googtrans(/en/${currentLang})`;
-      this.href = url.toString();
-    });
+    const originalHref = link.href;
+    link.href = `${originalHref}#googtrans(/en/${selectedLang})`;
   });
+});
+
+// Dropdown Change Listener
+document.getElementById('languageSwitcher').addEventListener('change', function() {
+  changeLanguage(this.value);
 });
     </script>
     
