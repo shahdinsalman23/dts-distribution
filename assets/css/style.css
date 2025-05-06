@@ -1434,8 +1434,10 @@ section.faqs-sec {
 /*********** Terms Conditions Section CSS End ***********/
 
 
-.goog-te-banner-frame { 
-  display: none !important; 
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
 }
 
 #languageSwitcher {
