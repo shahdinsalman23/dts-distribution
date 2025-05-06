@@ -26,43 +26,25 @@
           <div class="col-lg-7  d-none d-lg-block">
             <div class="header-nav">
               <ul>
-                <li class="dropdown-nav"><a href="aboutus.html">About DTS</a>
-                  <ul class="dropdown-menus">
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">purpose & strategy</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Data Privacy</a></li>
-                  </ul>
+                <li><a href="aboutus.html">About DTS</a>
                 </li>
                 <li class="dropdown-nav"><a href="oursolutions.html">Our solutions</a>
                   <ul class="dropdown-menus">
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">purpose & strategy</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Data Privacy</a></li>
+                    <li><a href="logisticssolutions.html">Logistics solutions</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
                   </ul>
                 </li>
-                <li class="dropdown-nav"><a href="sustainability.html">Sustainability</a>
-                  <ul class="dropdown-menus">
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">purpose & strategy</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Data Privacy</a></li>
-                  </ul>
-                </li>
-                <!-- <li><a href="#">Careers</a></li> -->
-                <li class="dropdown-nav"><a href="support.html">Support</a>
-                  <ul class="dropdown-menus">
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="help.html">Help & Support</a></li>
-                  </ul>
-                </li>
+                <li><a href="faq.html">FAQs</a></li>
                 <li><a href="contact.html">Contact us</a></li>
               </ul>
             </div>
           </div>
           <div class="col-lg-2 col-6">
-            <div class="header-end">
+            <div class="header-end  d-flex justify-content-end align-items-center">
+              <select id="languageSwitcher" class="d-none d-lg-block" style="margin-right: 10px; padding: 5px;">
+                <option value="en">EN</option>
+                <option value="da">DA</option>
+              </select>
               <button type="button" data-toggle="modal" data-target="#exampleModal" class=" d-none d-lg-block">Get a quote</button>
               <button class="hamburger d-lg-none">☰</button>
             </div>
@@ -72,6 +54,7 @@
     </header>
     <!-- Header Main End -->
 
+    
     <!-- Mobile Sidebar  Start -->
     <div class="mobile-sidebar">
       <div class="sidebar-header d-lg-none">
@@ -83,7 +66,7 @@
     <div class="overlay"></div>
     <!-- Mobile Sidebar End -->
 
-
+  <div id="google_translate_element" style="position:absolute;top:-9999px;left:-9999px;"></div>
 
     <!-- Get A Quote Modal Start -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -466,11 +449,9 @@
               <div class="footer-links dts-links">
                 <h5>DTS</h5>
                 <ul>
-                  <li><a href="">Contact us</a></li>
-                  <li><a href="">About DTS</a></li>
-                  <!-- <li><a href="">Careers</a></li> -->
-                  <li><a href="">Sustainability</a></li>
-                  <li><a href="">Support</a></li>
+                  <li><a href="aboutus.html">About DTS</a></li>
+                  <li><a href="faq.html">Faqs</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
                 </ul>
               </div>
             </div>
@@ -478,10 +459,8 @@
               <div class="footer-links">
                 <h5>Our Solutions</h5>
                 <ul>
-                  <li><a href="">Industry Solutions</a></li>
-                  <li><a href="">Logistic solutions</a></li>
-                  <li><a href="">Green logistics</a></li>
-                  <li><a href="">All solutions</a></li>
+                  <li><a href="logisticssolutions.html">Logistic solutions</a></li>
+                  <li><a href="destinations.html">Destinations</a></li>
                 </ul>
               </div>
             </div>
@@ -489,10 +468,9 @@
               <div class="footer-links">
                 <h5>Legal</h5>
                 <ul>
-                  <li><a href="">Legal notice</a></li>
-                  <li><a href="">Data privacy</a></li>
-                  <li><a href="">Cookies</a></li>
-                  <li><a href="">Terms & conditions</a></li>
+                  <li><a href="legalnotice.html">Legal notice</a></li>
+                  <li><a href="dataprivacy.html">Data privacy</a></li>
+                  <li><a href="termsconditions.html">Terms & conditions</a></li>
                 </ul>
               </div>
             </div>
@@ -518,6 +496,63 @@
 
 
   </main>
+
+
+  <script type="text/javascript">
+    // Google Translate API Loader
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,da',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+      
+      // Initialize custom selector
+      const googleSelect = document.querySelector('.goog-te-combo');
+      const customSelect = document.getElementById('languageSwitcher');
+      
+      // Sync on load
+      if(googleSelect) {
+        customSelect.value = googleSelect.value;
+      }
+    }
+    
+    // Custom Language Change Handler
+    function changeLanguage(lang) {
+      const googleSelect = document.querySelector('.goog-te-combo');
+      if(googleSelect) {
+        googleSelect.value = lang;
+        googleSelect.dispatchEvent(new Event('change'));
+      } else {
+        console.error('Google Translate element not found!');
+        // Fallback: Redirect to language specific page
+        window.location.href = window.location.href + '?lang=' + lang;
+      }
+    }
+    
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      const langSwitcher = document.getElementById('languageSwitcher');
+      
+      langSwitcher.addEventListener('change', function() {
+        changeLanguage(this.value);
+      });
+    
+      // Observe for Google Translate DOM changes
+      const observer = new MutationObserver(() => {
+        const googleSelect = document.querySelector('.goog-te-combo');
+        if(googleSelect) {
+          langSwitcher.value = googleSelect.value;
+        }
+      });
+    
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+    </script>
+    
+    <!-- Google Translate Script Loader -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
   <script src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/slick.js"></script>
@@ -527,7 +562,7 @@
 
 
   <div class="whatsaap-icon">
-    <a href="#"><img src="assets/images/whatsaap.png" alt=""></a>
+    <a href="https://wa.link/50te1w" target="_blank"><img src="assets/images/whatsaap.png" alt=""></a>
   </div>
 
   <div class="car-top">

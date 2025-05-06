@@ -26,12 +26,12 @@
 /************** Theme Button CSS Start **************/
 
 .themebtn {
-  background: red;
+  background: #090979;
   color: #fff;
   padding: 10px 30px;
   border-radius: 30px;
   font-family: foundrysterling;
-  border: 1px solid red;
+  border: 1px solid #090979;
   transition: all .6s ease;
   font-size: 18px;
   display: inline-block;
@@ -40,7 +40,7 @@
 
 .themebtn:hover {
   background: transparent;
-  color: red;
+  color: #090979;
   text-decoration-line: none;
 }
 
@@ -76,7 +76,8 @@ header.header-main {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 40px;
 }
 
 .header-nav ul li {
@@ -88,13 +89,13 @@ header.header-main {
 }
 
 .header-end button {
-  background: red;
+  background: #090979;
   color: #fff;
   padding: 8px 28px;
   border-radius: 30px;
   cursor: pointer;
   font-family: foundrysterling;
-  border: 1px solid red;
+  border: 1px solid #090979;
   transition: all .6s ease;
 }
 
@@ -105,7 +106,7 @@ header.header-main {
 .header-end button:hover {
   text-decoration-line: none;
   background: transparent;
-  color: red;
+  color: #090979;
 }
 
 .header-end {
@@ -132,7 +133,7 @@ header.header-main {
 .header-nav ul li a::before {
   position: absolute;
   content: "";
-  background: red;
+  background: #090979;
   height: 2px;
   width: 0%;
   bottom: -3px;
@@ -166,6 +167,7 @@ header.header-main {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1000;
+  gap: 0px !important;
   border-radius: 4px;
   margin-top: 0.5rem !important;
   flex-direction: column;
@@ -195,7 +197,7 @@ header.header-main {
 }
 
 .dropdown-menus li:hover a {
-  background: red;
+  background: #090979;
   color: #fff !important;
   padding-left: 1.75rem;
 }
@@ -222,7 +224,7 @@ header.header-main {
   display: block;
   padding: 5px 10px;
   border-radius: 5px;
-  border: 1px solid red;
+  border: 1px solid #090979;
   font-family: 'Poppins';
   color: #000;
 }
@@ -238,7 +240,7 @@ header.header-main {
 
 .get-input-field textarea {
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #090979;
   border-radius: 5px;
   height: 100px;
   resize: none;
@@ -266,10 +268,10 @@ header.header-main {
   display: inline-block;
   padding: 10px 40px;
   border-radius: 40px;
-  border: 1px solid red;
+  border: 1px solid #090979;
   font-size: 16px;
   font-family: 'foundrysterling';
-  background: red;
+  background: #090979;
   color: #fff;
   cursor: pointer;
   transition: all .6s ease;
@@ -277,7 +279,7 @@ header.header-main {
 
 .getquote-formbtn button:hover {
   background: transparent;
-  color: red;
+  color: #090979;
 }
 
 .getquote-formbtn button:focus {
@@ -342,6 +344,10 @@ section.first-banner-sec {
   font-size: 18px;
   font-family: 'Poppins';
   margin: 0px 0px 20px 0px;
+}
+
+.first-banner-txt .themebtn:hover {
+  color: #fff;
 }
 
 /*********** First Banner Section CSS End ***********/
@@ -428,7 +434,7 @@ section.precision-matter-sec {
 .industry-freight-card {
   text-align: center;
   padding: 20px;
-  border: 1px solid red;
+  border: 1px solid #090979;
   margin: 0px 0px 50px 0px;
   border-radius: 10px;
   height: 300px;
@@ -461,7 +467,7 @@ section.precision-matter-sec {
 
 .industry-freight-card:hover {
   transform: translate(0px, -10px);
-  background: red;
+  background: #090979;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
@@ -509,7 +515,7 @@ section.precision-matter-sec {
 }
 
 .latest-news-card:hover .latest-news-txt h4 {
-  color: red;
+  color: #090979;
 }
 
 .latest-news-txt p {
@@ -579,15 +585,6 @@ section.precision-matter-sec {
   width: 100%;
   padding: 100px 0px;
   position: relative;
-}
-
-.dts-numbers-sec::before {
-  position: absolute;
-  content: "";
-  background: #95181785;
-  width: 100%;
-  height: 100%;
-  top: 0px;
 }
 
 .dts-numbers-text {
@@ -678,7 +675,7 @@ section.testimonails-sec-start {
 
 
 section.any-question-sec {
-  background: red;
+  background: #090979;
   padding: 60px 0px;
 }
 
@@ -699,7 +696,7 @@ section.any-question-sec {
 
 .any-question-txt button {
   background: #fff;
-  color: red;
+  color: #090979;
   padding: 8px 28px;
   border-radius: 30px;
   cursor: pointer;
@@ -751,7 +748,7 @@ section.any-question-sec {
 }
 
 .inner-banner-txt {
-    background: red;
+    background: #090979;
     text-align: center;
     padding: 40px 0px;
     border-radius: 10px;
@@ -759,7 +756,7 @@ section.any-question-sec {
 
 .inner-banner-txt h3 {
     color: #fff;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'foundrysterling';
 }
 
@@ -811,7 +808,7 @@ section.any-question-sec {
 
 .dts-provide-card:hover {
   transform: translate(0px, -10px);
-  background: red;
+  background: #090979;
 }
 
 .dts-provide-card:hover img {
@@ -961,7 +958,7 @@ section.contact-form-sec {
 
 .contact-form h6 {
   text-align: center;
-  color: red;
+  color: #090979;
   text-transform: uppercase;
   font-family: 'Poppins';
 }
@@ -995,7 +992,7 @@ section.contact-form-sec {
 }
 
 .contact-inform-icon {
-  background: red;
+  background: #090979;
   height: 100%;
   padding: 15px 20px;
   width: 100%;
@@ -1038,6 +1035,417 @@ section.contact-form-sec {
 /*********** Contact Us Section CSS End ***********/
 
 
+/*********** Explore Your Option Section CSS Start ***********/
+
+.explore-options-sec {
+  padding: 50px 0px;
+}
+
+.explore-option-head {
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+}
+
+.explore-option-head h4 {
+  font-family: 'foundrysterling';
+  font-size: 50px;
+  color: #000;
+}
+
+.explore-box-img img {
+  width: 100%;
+  transition: all .6s ease;
+}
+
+.exploreoption-box {
+  background: #e9e9e9;
+  transition: all .6s ease;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+}
+
+.explore-option-txt {
+  text-align: center;
+  padding: 30px 30px;
+  height: 170px;
+}
+
+.explore-option-txt h5 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 22px;
+}
+
+.explore-option-txt p {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 16px;
+}
+
+.explore-box-img {
+  height: 190px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.exploreoption-box:hover img {
+  transform: scale(1.3);
+}
+
+.exploreoption-box:hover {
+  transform: translate(0px, -10px);
+}
+
+
+/*********** Explore Your Option Section CSS End ***********/
+
+
+
+/*********** Fulfilment Service Section CSS Start ***********/
+
+
+section.our-solutions-sec {
+  padding: 80px 0px 50px 0px;
+}
+
+.logis-img img {
+  width: 100%;
+}
+
+.our-logis-txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.our-logis-txt h6 {
+  color: #000;
+  font-family: 'foundrysterling';
+  font-size: 40px;
+}
+
+.our-logis-txt p {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 24px;
+}
+
+
+/*********** Fulfilment Service Section CSS End ***********/
+
+
+/*********** Shipping Section CSS Start ***********/
+
+
+section.shipping-sec {
+  padding: 60px 0px 60px 0px;
+}
+
+.shipping-head {
+  text-align: center;
+  margin: 0px 0px 70px 0px;
+}
+
+.shipping-head h4 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 40px;
+}
+
+.shipping-country {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.shipping-head p {
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: #000;
+}
+
+
+.shipping-img img {
+  width: 100%;
+}
+
+.shipping-text {
+  text-align: center;
+  padding: 10px;
+  background: #c9c6c6;
+  color: #000;
+  font-weight: bold;
+  font-family: 'foundrysterling';
+  margin: 0px;
+}
+
+
+/*********** Shipping Section CSS End ***********/
+
+
+
+
+/*********** Faqs Section CSS Start ***********/
+
+
+/* accordion
+------------------------------------*/
+.accordion,
+.accordion * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.accordion {
+  overflow: hidden;
+  background: none;
+  margin-top: 30px;
+}
+.quest-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #ececec;
+  color: #090978;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 0px;
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  transition: all linear 0.15s;
+  text-decoration: none;
+  border-bottom: 1px solid #dbdbdb;
+}
+.quest-title:before {
+  position: absolute;
+  content: "\e91e";
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  top: 0px;
+  font-family: "icomoon" !important;
+  color: #1e1e1e;
+  font-size: 20px;
+}
+.quest-title.active,
+.quest-title:hover {
+  content: "\e91c";
+}
+.quest-title:after {
+  width: 60px;
+  height: 1px;
+  left: -60px;
+  bottom: -1px;
+  background: #dbdbdb;
+  position: absolute;
+  content: "";
+}
+.quest-title.active:before {
+  content: "\e91c";
+}
+.quest-title:hover:before {
+  /*content: "\f056";*/
+}
+.quest-content {
+  padding: 15px 20px;
+  display: none;
+  background: #dddddd;
+  margin-bottom: 0px;
+  float: left;
+  width: 100%;
+}
+
+
+.quest-content p {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0px;
+  color: #000;
+  font-family: 'Poppins';
+}
+
+section.faqs-sec {
+  padding: 50px 0px 30px 0px;
+}
+
+.faqs-head {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.faqs-head h4 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 40px;
+}
+
+.quest-content ul {
+  padding: 5px 0px 0px 20px;
+}
+
+.quest-content ul li {
+  font-family: 'Poppins';
+  color: #000;
+  font-size: 14px;
+}
+
+.quest-section a:hover {
+  text-decoration-line: none;
+}
+
+
+/*********** Faqs Section CSS End ***********/
+
+
+/*********** Legal Notice Section CSS Start ***********/
+
+
+.legal-notice-sec {
+  padding: 50px 0px;
+}
+
+.legal-notice-txt h3 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 40px;
+  margin: 0px 0px 20px 0px;
+}
+
+.legal-notice-txt h4 {
+  color: #090979;
+  font-size: 20px;
+  margin: 0px 0px 30px 0px;
+  font-family: 'foundrysterling';
+}
+
+.legal-notice-txt h5 {
+  font-family: 'Poppins';
+  color: #000;
+  margin: 40px 0px 30px 0px;
+  font-size: 18px;
+}
+
+
+.legal-notice-txt p {
+  font-family: 'Poppins';
+  color: #000;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0px 0px 30px 0px;
+}
+
+
+/*********** Legal Notice Section CSS End ***********/
+
+
+/*********** Data Privacy Section CSS Start ***********/
+
+
+.data-privacy-sec {
+  padding: 70px 0px 50px 0px;
+}
+
+.data-privacy-txt h3 {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0px 0px 40px 0px;
+}
+
+.data-privacy-txt h5 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0px 130px 30px 0px;
+  line-height: normal;
+}
+
+.data-privacy-txt h4 {
+  font-family: 'foundrysterling';
+  color: #000;
+  margin: 40px 0px 30px 0px;
+  font-size: 22px;
+}
+
+.data-privacy-txt p {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0px 0px 24px 0px;
+}
+
+.data-privacy-txt h6 {
+  font-family: 'Poppins';
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0px 0px 20px 0px;
+}
+
+.data-privacy-txt ul {
+    margin: 0px 0px 30px 25px;
+}
+
+.data-privacy-txt ul li {
+    padding: 4px 0px;
+}
+
+
+/*********** Data Privacy Section CSS End ***********/
+
+
+/*********** Terms Conditions Section CSS Start ***********/
+
+.terms-conditions-sec {
+  padding: 50px 0px;
+}
+
+.terms-conditions-txt h3 {
+  font-family: 'foundrysterling';
+  color: #000;
+  font-size: 40px;
+  margin: 0px 0px 20px 0px;
+}
+
+.terms-conditions-txt h4 {
+  color: #000;
+  font-family: 'foundrysterling';
+  margin: 20px 0px 15px 0px;
+  font-size: 22px;
+}
+
+.terms-conditions-txt p {
+  font-family: 'Poppins';
+  color: #000;
+  margin: 0px;
+}
+
+.terms-conditions-txt ul {
+  padding: 0px 0px 0px 30px;
+}
+
+.terms-conditions-txt ul li {
+  color: #000;
+  padding: 3px 0px;
+}
+
+
+/*********** Terms Conditions Section CSS End ***********/
+
+
+.goog-te-banner-frame { 
+  display: none !important; 
+}
+
+#languageSwitcher {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+
 /*********** Footer Main Section CSS Start ***********/
 
 footer.footer-main {
@@ -1071,7 +1479,7 @@ footer.footer-main {
 
 .footer-links ul li a:hover {
   text-decoration-line: none;
-  color: red;
+  color: #090979;
 }
 
 .footer-logo p {
@@ -1091,18 +1499,18 @@ footer.footer-main {
 }
 
 .footer-logo ul li a {
-  background: red;
+  background: #090979;
   color: #fff;
   padding: 8px 12px;
   border-radius: 50px;
   display: inline-block;
-  border: 1px solid red;
+  border: 1px solid #090979;
   transition: all .6s ease;
 }
 
 .footer-logo ul li a:hover {
   background: transparent;
-  color: red;
+  color: #090979;
 }
 
 .footer-logo ul li .facebook {
@@ -1126,7 +1534,7 @@ footer.footer-main {
 }
 
 .footer-copyright {
-  background: red;
+  background: #090979;
   padding: 12px 0px;
 }
 
@@ -1143,7 +1551,7 @@ footer.footer-main {
   bottom: 20px;
   z-index: 999;
   right: 40px;
-  background: red;
+  background: #090979;
   padding: 10px;
   border-radius: 30px;
   cursor: pointer;
@@ -1299,7 +1707,7 @@ nav.mobile-nav .header-nav ul li {
   padding: 0px;
   font-weight: bold;
   font-size: 30px;
-  color: red;
+  color: #090979;
 }
 
 
@@ -1417,7 +1825,7 @@ nav.mobile-nav .header-nav ul li {
   }
 
   .inner-banner-txt {
-    background: red;
+    background: #090979;
     text-align: center;
     padding: 30px 0px;
     border-radius: 10px;
