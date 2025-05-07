@@ -499,58 +499,55 @@
 
 
   <script type="text/javascript">
-    // Language Store Karne Ke Liye
-let selectedLang = localStorage.getItem('siteLang') || 'en';
-
-// Google Translate Initialize
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,da',
-    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-  }, 'google_translate_element');
-
-  // Force Language Set Karo
-  const googleSelect = document.querySelector('.goog-te-combo');
-  if(googleSelect) {
-    googleSelect.value = selectedLang;
-    googleSelect.dispatchEvent(new Event('change'));
-  }
-}
-
-// Language Change Handler
-function changeLanguage(lang) {
-  selectedLang = lang;
-  localStorage.setItem('siteLang', lang);
-  
-  // Google Translate Ko Update Karo
-  const googleSelect = document.querySelector('.goog-te-combo');
-  if(googleSelect) {
-    googleSelect.value = lang;
-    googleSelect.dispatchEvent(new Event('change'));
-    document.cookie = `googtrans=/en/${lang}; path=/; domain=.github.io`;
-  }
-  
-  // URL Hash Update (Navigation Ke Liye)
-  window.location.hash = `googtrans(/en/${lang})`;
-}
-
-// Page Load Par Setup
-document.addEventListener('DOMContentLoaded', () => {
-  const langSwitcher = document.getElementById('languageSwitcher');
-  langSwitcher.value = selectedLang;
-
-  // Har Link Ko Modify Karo
-  document.querySelectorAll('a').forEach(link => {
-    const originalHref = link.href;
-    link.href = `${originalHref}#googtrans(/en/${selectedLang})`;
-  });
-});
-
-// Dropdown Change Listener
-document.getElementById('languageSwitcher').addEventListener('change', function() {
-  changeLanguage(this.value);
-});
+    // Google Translate API Loader
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,da',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+      
+      // Initialize custom selector
+      const googleSelect = document.querySelector('.goog-te-combo');
+      const customSelect = document.getElementById('languageSwitcher');
+      
+      // Sync on load
+      if(googleSelect) {
+        customSelect.value = googleSelect.value;
+      }
+    }
+    
+    // Custom Language Change Handler
+    function changeLanguage(lang) {
+      const googleSelect = document.querySelector('.goog-te-combo');
+      if(googleSelect) {
+        googleSelect.value = lang;
+        googleSelect.dispatchEvent(new Event('change'));
+      } else {
+        console.error('Google Translate element not found!');
+        // Fallback: Redirect to language specific page
+        window.location.href = window.location.href + '?lang=' + lang;
+      }
+    }
+    
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      const langSwitcher = document.getElementById('languageSwitcher');
+      
+      langSwitcher.addEventListener('change', function() {
+        changeLanguage(this.value);
+      });
+    
+      // Observe for Google Translate DOM changes
+      const observer = new MutationObserver(() => {
+        const googleSelect = document.querySelector('.goog-te-combo');
+        if(googleSelect) {
+          langSwitcher.value = googleSelect.value;
+        }
+      });
+    
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
     </script>
     
     <!-- Google Translate Script Loader -->

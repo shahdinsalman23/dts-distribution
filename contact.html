@@ -137,36 +137,36 @@
           <div class="contact-form">
             <h6>Contact Us</h6>
             <h4>Write us a message</h4>
-            <form action="">
+            <form  action="sender.php" method="POST">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">First Name</label>
-                    <input type="text">
+                    <input type="text"  name="first_name">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Last Name</label>
-                    <input type="text">
+                    <input type="text" name="last_name">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Email Address</label>
-                    <input type="text">
+                    <input type="text" name="email_address" required>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Phone Number</label>
-                    <input type="text">
+                    <input type="text" name="phone_number" required>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="get-input-field">
                     <label for="">Message</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea name="" id=""  name="text_message" ></textarea>
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -206,36 +206,36 @@
         </div>
         <div class="modal-body quote-modal-body">
           <div class="getquote-form">
-            <form action="">
+            <form  action="sender.php" method="POST">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">First Name</label>
-                    <input type="text">
+                    <input type="text"  name="first_name">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Last Name</label>
-                    <input type="text">
+                    <input type="text" name="last_name">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Email Address</label>
-                    <input type="text">
+                    <input type="text" name="email_address" required>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="get-input-field">
                     <label for="">Phone Number</label>
-                    <input type="text">
+                    <input type="text" name="phone_number" required>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="get-input-field">
                     <label for="">Message</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea name="" id=""  name="text_message" ></textarea>
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -380,6 +380,31 @@
   <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="assets/js/wow.js"></script>
   <script type="text/javascript" src="assets/js/functions.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <script>
+    // Function to check for session messages
+    function checkMessage() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'getMessage.php', true);
+        xhr.onload = function() {
+            if (xhr.status === 200 && xhr.responseText) {
+                
+                Swal.fire({
+                title: 'Message Sent Successfully',
+                text: xhr.responseText,
+                icon: 'success', // Use 'error' for error messages
+                confirmButtonText: 'OK'
+            });
+            }
+        };
+        xhr.send();
+    }
+
+    // Call the function to check and display the message
+    checkMessage();
+    </script>
 
 
   <div class="whatsaap-icon">
