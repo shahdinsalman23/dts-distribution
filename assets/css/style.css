@@ -1884,4 +1884,67 @@ nav.mobile-nav .header-nav ul li {
     margin: 0px 0px 30px 0px;
   }
 
+  .testi-img img {
+    height: 200px;
+  }
+
+  .testi-text {
+    text-align: center;
+  }
+
+  .testi-text h4 {
+    text-align: center;
+  }
+
+  .our-logis-txt {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .exploreoption-box {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .shipping-country {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .legal-notice-txt {
+    text-align: center;
+  }
+
+  .data-privacy-txt {
+    text-align: center;
+  }
+
+  .data-privacy-txt h5 {
+    margin: 0px 20px 30px 10px;
+  }
+
+  .data-privacy-txt ul li {
+    list-style: none;
+  }
+
+  .data-privacy-txt ul {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .terms-conditions-txt {
+    text-align: center;
+  }
+
+  .terms-conditions-txt ul li {
+    list-style: none;
+  }
+
+  .terms-conditions-txt ul {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .testimonail-card {
+    flex-direction: column;
+  }
+
+
+
  }
